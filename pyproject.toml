@@ -1,2 +1,2 @@
-[tool.vercel.scripts]
-build = "python library.py"
+[tool.vercel]
+entrypoint = "library:app"
