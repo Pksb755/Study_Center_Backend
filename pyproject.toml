@@ -1,2 +1,2 @@
 [tool.vercel.scripts]
-build = "python build.py"
+build = "python library.py"
