@@ -16,11 +16,20 @@ from flask import send_from_directory
 import io
 import base64
 from qrcode.constants import ERROR_CORRECT_M
+from supabase import create_client, Client
+from dotenv import load_dotenv
+
 
 # ============================================================
 # APP CONFIG
 # ============================================================
 
+load_dotenv()
+
+supabase: Client = create_client(
+    os.environ.get("SUPABASE_URL"),
+    os.environ.get("SUPABASE_KEY")
+)
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 
